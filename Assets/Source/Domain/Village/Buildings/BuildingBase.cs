@@ -1,13 +1,14 @@
 using System.Collections.Generic;
+using Source.Domain.Stats;
 using Source.Domain.Village.Villagers;
 
 namespace Source.Domain.Village.Buildings
 {
-    public abstract class BuildingBase
+    public abstract class BuildingBase : Unit
     {
         private List<IVillager> _villagers = new();
         
-        protected BuildingBase(int capacity)
+        protected BuildingBase(int capacity, StatsHandler stats) : base(stats)
         {
             Capacity = capacity;
         }

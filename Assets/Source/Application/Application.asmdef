@@ -1,0 +1,6 @@
+{
+  "name": "Application",
+  "references": [
+    "Domain"
+  ]
+}
