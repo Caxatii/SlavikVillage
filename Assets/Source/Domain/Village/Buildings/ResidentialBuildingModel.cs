@@ -8,7 +8,7 @@ namespace Domain.Source.Domain.Villagers
         //settle, evict
         public void Settle(Villager villager)
         {
-            if()
+            // if()
         }
     }
 }
