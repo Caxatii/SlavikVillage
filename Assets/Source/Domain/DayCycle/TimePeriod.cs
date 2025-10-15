@@ -1,4 +1,4 @@
-namespace Domain
+namespace Source.Domain.DayCycle
 {
     public readonly struct TimePeriod
     {

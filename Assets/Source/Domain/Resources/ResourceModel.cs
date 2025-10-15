@@ -1,7 +1,7 @@
 
-using Domain.Reactive;
+using Source.Domain.Reactive;
 
-namespace Domain
+namespace Source.Domain.Resources
 {
     public class ResourceModel
     {

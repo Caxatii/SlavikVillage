@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace The_imp.Mono.Stats
+namespace Source.Domain.Stats
 {
     public class StatAverage : IReadonlyStatAverage, IDisposable
     {

@@ -1,9 +1,12 @@
 using System.Collections.Generic;
+using Source.Domain.Village.Buildings;
+using Source.Domain.Village.Villagers;
 
-namespace Domain.Source.Domain.Villagers
+namespace Source.Domain.Village
 {
     public class VillageModel
     {
-        private List<Villager> _villagers;
+        private List<IVillager> _villagers = new();
+        private List<BuildingBase> _buildings = new();
     }
 }

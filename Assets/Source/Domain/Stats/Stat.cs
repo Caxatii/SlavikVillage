@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace The_imp.Mono.Stats
+namespace Source.Domain.Stats
 {
     [Serializable]
     public class Stat

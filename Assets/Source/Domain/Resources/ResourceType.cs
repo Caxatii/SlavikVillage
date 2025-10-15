@@ -1,4 +1,4 @@
-namespace Domain.Reactive
+namespace Source.Domain.Resources
 {
     public enum ResourceType
     {
