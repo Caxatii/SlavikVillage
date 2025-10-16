@@ -1,0 +1,6 @@
+{
+  "name": "ContractInterfaces",
+  "references": [
+    "Domain"
+  ]
+}

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Source.Domain.Stats;
 using Source.Domain.Village.Villagers;
+using UnityEngine;
 
 namespace Source.Domain.Village.Buildings
 {
@@ -10,12 +11,15 @@ namespace Source.Domain.Village.Buildings
 
         public IReadOnlyList<IVillager> Villagers => _villagers;
         
-        protected BuildingBase(int capacity, StatsHandler stats) : base(stats)
+        protected BuildingBase(int capacity, StatsHandler stats, Vector2 worldPosition) : base(stats)
         {
             Capacity = capacity;
+            WorldPosition = worldPosition;
         }
 
         public int Capacity { get; private set; }
+        
+        public Vector2 WorldPosition { get; private set; }
 
         public bool IsEnoughCapacity => Capacity > _villagers.Count;
         
