@@ -1,6 +1,7 @@
 {
   "name": "Infrastructure",
   "references": [
-    "Application"
+    "Application",
+    "Unity.InputSystem"
   ]
 }
