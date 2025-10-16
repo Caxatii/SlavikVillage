@@ -1,6 +1,7 @@
 {
   "name": "Presentation",
   "references": [
-    "Infrastructure"
+    "Infrastructure",
+    "ContractInterfaces"
   ]
 }

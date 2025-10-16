@@ -2,6 +2,8 @@
   "name": "Infrastructure",
   "references": [
     "Application",
+    "Domain",
+    "ContractInterfaces",
     "Unity.InputSystem"
   ]
 }
