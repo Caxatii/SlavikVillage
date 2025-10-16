@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace Source.Infrastructure.DataTransfer
+namespace Source.Infrastructure.Presenters.Animation
 {
     public enum AnimationStateType
     {

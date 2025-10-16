@@ -1,4 +1,4 @@
-using ContractInterfaces;
+using Source.ContractInterfaces;
 using Source.Domain.Village.Villagers;
 
 namespace Source.Application.Factories.Villagers

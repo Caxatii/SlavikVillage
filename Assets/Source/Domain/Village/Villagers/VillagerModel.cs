@@ -1,6 +1,8 @@
+using System.Collections.Generic;
+using NUnit.Framework;
 using Source.Domain.Reactive;
 using Source.Domain.Stats;
-using Source.Domain.Village.Villagers.Tasks;
+using Source.Domain.Village.UnitComponents;
 
 namespace Source.Domain.Village.Villagers
 {

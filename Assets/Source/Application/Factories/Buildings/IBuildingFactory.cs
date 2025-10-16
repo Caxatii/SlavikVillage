@@ -1,7 +1,7 @@
-using ContractInterfaces;
+using Source.ContractInterfaces;
 using Source.Domain.Village.Buildings;
 
-namespace Source.Application.Factories
+namespace Source.Application.Factories.Buildings
 {
     public interface IBuildingFactory
     {
@@ -15,6 +15,6 @@ namespace Source.Application.Factories
             return Create((T)repository);
         }
         
-        public BuildingBase Create<T>(T repository);
+        public BuildingBase Create(T repository);
     }
 }

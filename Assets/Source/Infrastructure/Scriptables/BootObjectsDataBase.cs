@@ -1,14 +1,16 @@
-using System;
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "BootObjectsDataBase", menuName = "Scriptable Objects/DataBases/Boot/BootObjectsDataBase")]
-public class BootObjectsDataBase : ScriptableObject
+namespace Source.Infrastructure.Scriptables
 {
-    [SerializeField] private BootObjectsData[] _allPrefabs;
-
-    public BootObjectsData GetPrefabByTag(string tag)
+    [CreateAssetMenu(fileName = "BootObjectsDataBase", menuName = "Scriptable Objects/DataBases/Boot/BootObjectsDataBase")]
+    public class BootObjectsDataBase : ScriptableObject
     {
-        return _allPrefabs.First(x => x.Tag == tag);
+        [SerializeField] private BootObjectsData[] _allPrefabs;
+
+        public BootObjectsData GetPrefabByTag(string tag)
+        {
+            return _allPrefabs.First(x => x.Tag == tag);
+        }
     }
 }
