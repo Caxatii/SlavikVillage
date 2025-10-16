@@ -6,7 +6,7 @@ namespace Source.Application
     public class DayCycleService : IService
     {
         private DayCycleModel _dayCycle;
-        private Dictionary<DayTimeType, IDayCycleModule> _modules;
+        private Dictionary<DayTimeType, List<IDayCycleModule>> _modules = new();
 
         public DayCycleService(DayCycleModel dayCycle, params IDayCycleModule[] modules)
         {
@@ -14,7 +14,10 @@ namespace Source.Application
 
             foreach (IDayCycleModule module in modules)
             {
-                
+                if (_modules.TryGetValue(module.Type, out List<IDayCycleModule> cycleModules))
+                    cycleModules.Add(module);
+                else
+                    _modules.Add(module.Type, new List<IDayCycleModule> { module });
             }
         }
 
@@ -28,9 +31,10 @@ namespace Source.Application
             _dayCycle.AddTime(time);
         }
 
-        private void OnDayTimeChanged(DayTimeType obj)
+        private void OnDayTimeChanged(DayTimeType timeType)
         {
-            
+            foreach (IDayCycleModule module in _modules[timeType]) 
+                module.Handle();
         }
 
         public void Dispose()
