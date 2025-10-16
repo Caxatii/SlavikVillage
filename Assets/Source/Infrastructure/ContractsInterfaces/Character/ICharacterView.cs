@@ -8,5 +8,7 @@ namespace Source.Infrastructure.ContractsInterfaces.Character
         public void SetAnimationState(AnimationData data);
 
         public void PlayVFX(AnimationData data);
+
+        public void Move(Vector2 position, bool lookRight);
     }
 }

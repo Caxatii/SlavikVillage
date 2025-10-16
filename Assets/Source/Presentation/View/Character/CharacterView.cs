@@ -23,5 +23,15 @@ namespace Source.Presentation.View.Character
         {
             _vfxSetiings.First(x => x.Type == data.State).VFX.Play();
         }
+
+        public void Move(Vector2 position, bool lookRight)
+        {
+            transform.position = position;
+
+            if (lookRight)
+                transform.localScale = new Vector2(-1, transform.localScale.y);
+            else
+                transform.localScale = new Vector2(1, transform.localScale.y);
+        }
     }
 }
