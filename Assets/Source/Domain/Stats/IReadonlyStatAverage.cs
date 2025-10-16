@@ -1,6 +1,6 @@
 using System;
 
-namespace The_imp.Mono.Stats
+namespace Source.Domain.Stats
 {
     public interface IReadonlyStatAverage : IDisposable
     {

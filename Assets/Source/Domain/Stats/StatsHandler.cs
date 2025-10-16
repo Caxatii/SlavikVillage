@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace The_imp.Mono.Stats
+namespace Source.Domain.Stats
 {
     public class StatsHandler : IReadonlyStatsHandler
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Domain.Reactive;
+using Source.Domain.Reactive;
 
-namespace Domain
+namespace Source.Domain.DayCycle
 {
     public class DayCycleModel
     {

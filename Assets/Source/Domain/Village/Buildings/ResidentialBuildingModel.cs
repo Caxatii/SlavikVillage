@@ -1,14 +1,15 @@
-namespace Domain.Source.Domain.Villagers
+using Source.Domain.Stats;
+using Source.Domain.Village.Villagers;
+
+namespace Source.Domain.Village.Buildings
 {
     public class ResidentialBuildingModel : BuildingBase
     {
-        public int ResidentsCount { get; private set; }
-        public int Capacity { get; private set; }
+        public ResidentialBuildingModel(int capacity, StatsHandler stats) : base(capacity, stats) { }
 
-        //settle, evict
-        public void Settle(Villager villager)
+        protected override void OnSettle(IVillager villager)
         {
-            // if()
+            villager.SetProfession(ProfessionType.Resident);
         }
     }
 }

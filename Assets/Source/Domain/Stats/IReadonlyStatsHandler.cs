@@ -1,4 +1,4 @@
-namespace The_imp.Mono.Stats
+namespace Source.Domain.Stats
 {
     public interface IReadonlyStatsHandler
     {

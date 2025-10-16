@@ -1,7 +1,7 @@
-namespace The_imp.Mono.Stats
+namespace Source.Domain.Stats
 {
     public enum StatType
     {
-        
+        MaxHealth,
     }
 }

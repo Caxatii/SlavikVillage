@@ -1,6 +1,6 @@
 using System;
 
-namespace Domain.Reactive
+namespace Source.Domain.Reactive
 {
     public interface IReadonlyReactive<out T> where T : struct
     {
