@@ -5,10 +5,17 @@ using UnityEngine;
 
 namespace Source.Presentation.View.Character
 {
+    [RequireComponent(typeof(Rigidbody2D))]
     public class CharacterView : MonoBehaviour, ICharacterView
     {
+        private Rigidbody2D _characterRigidbody;
         [SerializeField] private Animator _animator;
         [SerializeField] private CharacterVFXData[] _vfxSetiings;
+
+        private void Awake()
+        {
+            _characterRigidbody = GetComponent<Rigidbody2D>();
+        }
 
         public void SetAnimationState(AnimationData data)
         {
@@ -24,11 +31,11 @@ namespace Source.Presentation.View.Character
             _vfxSetiings.First(x => x.Type == data.State).VFX.Play();
         }
 
-        public void Move(Vector2 position, bool lookRight)
+        public void Move(Vector2 direction)
         {
-            transform.position = position;
+            _characterRigidbody.linearVelocityX = direction.x;
 
-            if (lookRight)
+            if (direction.x > 0)
                 transform.localScale = new Vector2(-1, transform.localScale.y);
             else
                 transform.localScale = new Vector2(1, transform.localScale.y);

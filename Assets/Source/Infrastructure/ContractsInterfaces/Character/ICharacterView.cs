@@ -9,6 +9,6 @@ namespace Source.Infrastructure.ContractsInterfaces.Character
 
         public void PlayVFX(AnimationData data);
 
-        public void Move(Vector2 position, bool lookRight);
+        public void Move(Vector2 direction);
     }
 }
