@@ -1,9 +1,8 @@
 using Source.Domain.DayCycle;
 using Source.Domain.Village;
 using Source.Domain.Village.Villagers;
-using Source.Domain.Village.Villagers.Tasks;
 
-namespace Source.Application
+namespace Source.Application.DayCycle.Modules
 {
     public class DayTimeModule : IDayCycleModule
     {

@@ -1,4 +1,4 @@
-namespace ContractInterfaces
+namespace Source.ContractInterfaces
 {
     public interface IBuildingRepository
     {

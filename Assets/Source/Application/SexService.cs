@@ -3,7 +3,6 @@ using Source.Application.DataTransfer;
 using Source.Domain.Village;
 using Source.Domain.Village.Buildings;
 using Source.Domain.Village.Villagers;
-using Source.Domain.Village.Villagers.Tasks;
 
 namespace Source.Application
 {

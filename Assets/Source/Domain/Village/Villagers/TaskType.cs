@@ -1,4 +1,4 @@
-namespace Source.Domain.Village.Villagers.Tasks
+namespace Source.Domain.Village.Villagers
 {
     public enum TaskType
     {

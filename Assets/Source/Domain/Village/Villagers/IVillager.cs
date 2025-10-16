@@ -1,5 +1,4 @@
 using Source.Domain.Reactive;
-using Source.Domain.Village.Villagers.Tasks;
 
 namespace Source.Domain.Village.Villagers
 {

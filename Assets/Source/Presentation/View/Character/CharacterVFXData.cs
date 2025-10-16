@@ -1,5 +1,5 @@
-using Source.Infrastructure.DataTransfer;
 using System;
+using Source.Infrastructure.Presenters.Animation;
 using UnityEngine;
 
 namespace Source.Presentation.View.Character

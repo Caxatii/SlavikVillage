@@ -1,55 +1,31 @@
-using System;
-using Source.Domain.Reactive;
+using System.Collections.Generic;
 using Source.Domain.Stats;
+using Source.Domain.Village.UnitComponents;
 
 namespace Source.Domain.Village
 {
-    public class Unit : IDamageable, IHealable
+    public class Unit
     {
-        private ReactiveValue<float> _health;
-        private StatAverage _healthStat;
         private StatsHandler _stats;
+        private List<IUnitComponent> _components = new();
 
         public Unit(StatsHandler stats)
         {
             _stats = stats;
-            _healthStat = _stats.GetStatAverage(StatType.MaxHealth);
         }
 
-        public IReadonlyReactive<float> Health => _health;
+        public void AddComponent(IUnitComponent component)
+        {
+            _components.Add(component);
+        }
 
+        public void RemoveComponent(IUnitComponent component)
+        {
+            _components.Remove(component);
+        }
+        
         public IReadonlyStatsHandler Stats => _stats;
-        
-        public IReadonlyStatAverage HealthAverage => _healthStat;
 
-        public event Action Died;
-
-        
-        
-        public void Heal(float value)
-        {
-            if(value < 0)
-                return;
-
-            _health.Value += value;
-            HandleHealth();
-        }
-
-        public void Damage(float value)
-        {
-            if(value < 0)
-                return;
-            
-            _health.Value -= value;
-            HandleHealth();
-        }
-        
-        private void HandleHealth()
-        {
-            _health.Value = Math.Clamp(_health.Value, 0, _healthStat.Average);
-            
-            if(_health.Value == 0)
-                Died?.Invoke();
-        }
+        public IReadOnlyList<IUnitComponent> Components => _components;
     }
 }

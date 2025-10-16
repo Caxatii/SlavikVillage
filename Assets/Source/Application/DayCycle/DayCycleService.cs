@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using Source.Application.DayCycle.Modules;
 using Source.Domain.DayCycle;
 
-namespace Source.Application
+namespace Source.Application.DayCycle
 {
     public class DayCycleService : IService
     {

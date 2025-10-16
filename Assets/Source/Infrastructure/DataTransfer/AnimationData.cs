@@ -1,7 +1,6 @@
-using Source.Infrastructure.DataTransfer;
-using UnityEngine;
+using Source.Infrastructure.Presenters.Animation;
 
-namespace Source.Infrastructure.Presenters.Animation
+namespace Source.Infrastructure.DataTransfer
 {
     public struct AnimationData
     {

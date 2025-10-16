@@ -1,6 +1,7 @@
 using Source.Infrastructure.ContractsInterfaces.Character;
 using Source.Infrastructure.Presenters.Animation;
 using System.Linq;
+using Source.Infrastructure.DataTransfer;
 using UnityEngine;
 
 namespace Source.Presentation.View.Character

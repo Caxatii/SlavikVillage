@@ -1,6 +1,6 @@
 using Source.Domain.DayCycle;
 
-namespace Source.Application
+namespace Source.Application.DayCycle.Modules
 {
     public interface IDayCycleModule
     {
