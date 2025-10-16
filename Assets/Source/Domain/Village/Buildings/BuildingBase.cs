@@ -7,6 +7,8 @@ namespace Source.Domain.Village.Buildings
     public abstract class BuildingBase : Unit
     {
         private List<IVillager> _villagers = new();
+
+        public IReadOnlyList<IVillager> Villagers => _villagers;
         
         protected BuildingBase(int capacity, StatsHandler stats) : base(stats)
         {
